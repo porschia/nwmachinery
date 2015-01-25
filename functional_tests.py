@@ -1,29 +1,42 @@
 from selenium import webdriver
+import unittest
 
-browser = webdriver.Firefox()
+class NewVisitorTest(unittest.TestCase):
+	
+	def setUp(self):
+		self.browser = webdriver.Firefox()
+		self.browser.implicitly_wait(5)
 
-# Joe has some cranes that he needs to inspect so he goes
-# to a website to check out some software
-browser.get('http://localhost:8000')
+	def tearDown(self):
+		self.browser.quit()
 
-# He notices the page title and header mention the company name
-assert 'Northwestern Machinery' in browser.title
+	def test_can_start_a_list_and_retrieve_it_later(self):
+		# Joe has some cranes that he needs to inspect so he goes
+		# to a website to check out some software
+		self.browser.get('http://localhost:8000')
 
-# He is instructed to provide his name and email address
-# to access the software downloads
+		# He notices the page title and header 
+		# mention the company name
+		self.assertIn('Northwestern Machinery', self.browser.title)
+		self.fail('Finish the test!')
 
-# He types his name into the name field
+		# He is instructed to provide his name and email address
+		# to access the software downloads
 
-# When he hits enter it moves him into the email field
+		# He types his name into the name field
 
-# He types his email into the email field
+		# When he hits enter it moves him into the email field
 
-# When he hits enter it takes him to the page that has links 
-# to the software downloads
+		# He types his email into the email field
 
-# He notices that the page title and header mention the software
+		# When he hits enter it takes him to the page 
+		# that has links to the software downloads
 
-# Pleased with his software download he exits the browser and
-# tells all his friends about the website
+		# He notices that the page title and 
+		# header mention the software
 
-browser.quit()
+	# Pleased with his software download he exits the 
+	# browser and tells all his friends about the website
+
+if __name__ == '__main__':
+	unittest.main(warnings='ignore')
