@@ -16,3 +16,9 @@ class HomePageTest(TestCase):
 		response = home_page(request)
 		expected_html = render_to_string('home.html')
 		self.assertEqual(response.content.decode(), expected_html)
+		
+	def test_redirects_after_POST(self):
+		response = self.client.post('/', data={'id_name':
+			'Joe', 'id_email': 'joe@email.com'})
+		self.assertEqual(response.status_code, 302)
+		self.assertRedirects(response, '/softwaredownload')

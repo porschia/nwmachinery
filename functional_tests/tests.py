@@ -34,6 +34,12 @@ class NewVisitorTest(LiveServerTestCase):
 
 		# When he hits enter it moves him into the email field
 		inputbox.send_keys(Keys.ENTER)
+		
+		# He sees the next input box asks for his email address
+		inputbox = self.browser.find_element_by_id('id_email')
+		self.assertEqual(inputbox.get_attribute('placeholder'),
+			'Enter Your Email Address'
+			)
 
 		# He types his email into the email field
 		inputbox.send_keys('joe@email.com')
