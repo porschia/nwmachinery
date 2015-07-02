@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block header %}
+	<h1>Inspection Software Downloads</h1>
+	<ul class="list">
+		<li class="list_item"><a href="">Complete Free Trial: Version 4.42</a>
+		<li class="list_item"><a href="">Upgrade Only: Version 4.43</a>
+		<li class="list_item"><a href="">PDF Keeper Trial Edition: Version 1.04</a>
+		<li class="list_item"><a href="">Trusted Locations Utility for Access 2007a>
+		<li class="list_item"><a href="">Trusted Locations Utility for Access 2010</a>
+		<li class="list_item"><a href="">Inspect_It Software User Guide</a>
+		<li class="list_item"><a href="">Inspect_It PDF Keeper User Guide</a>
+{% endblock %}

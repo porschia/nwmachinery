@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block header %}
+	<h1>Inspection Software</h1><br>
+{% endblock %}
+
+{% block paragraph %}
+	<div class="center">
+		<p><b>Inspect_It is a Microsoft Access Program used for 
+	inspecting any equipment that needs regular or periodic 
+	inspections.</b></p><br>
+	</div> <!--close div "center"-->
+	<div style="padding-left:23%; padding-bottom: 20px;">
+	<p>Features include:</p>
+	<ul>
+		<li>Print your company logo, name and address on all forms, envelopes and labels.</li>
+		<li>Multiple inspectors can share the same laptop.</li>
+		<li>Remind each inspector when their certification has expired.</li>
+		<li>Enter customers or equipment once and access their information on other inspections.</li>
+		<li>Store completed inspections on the computer for instant access to information.</li>
+		<li>Keep forms /checklists on the computer for new inspections.</li>
+		<li>Print and store pictures of deficiencies and general condition of equipment with the inspection report.</li>
+		<li>Capture, store and print signatures on all reports using Topaz Signature pads.</li>
+		<li>Save reports in PDF form to allow for easy emailing and sharing of inspection.</li>
+		<li>Sort old inspections by date, customer, manufacturer, model or serial number.</li>
+		<li>Provision for magnetic particle inspection of block & ball</li>
+		<li>Synchronize information between multiple PC’s running Inspect_It</li>
+		<li>Use your forms to add  inspections for other equipment to Inspect_It for as little as $50.</li>
+	</ul><br><br>
+	<p>Sample Inspections</p>
+	<ul>
+		<li><a href="static/Samples/LatticeBoom.pdf" target="_blank">Lattice Boom Crane Inspection</a></li>
+		<li><a href="static/Samples/HydTelescopic.pdf" target="_blank">Hydraulic Telescopic Crane Inspection</a></li>
+		<li><a href="static/Samples/AerialLift.pdf" target="_blank">Aerial Lift Inspection</a></li>
+		<li><a href="static/Samples/LoadTest.pdf" target="_blank">Load Tests</a></li>
+	</ul><br>
+	</div>
+	<div class="center">
+		<p>To try a free version of Inspect_It please enter your name and email address below.</p>
+	
+{% endblock %}
+	
+{% block form %}
+	<form style="padding-bottom: 90px;" method="Post" action="/SoftwareDownload">
+		<label>Name</label>
+		<input name="name" id="id_name" placeholder="Enter Your Name" />
+		<label>Email</label>
+		<input name="email" id="id_email" placeholder="Enter Your Email" />
+		<button type="submit">Submit</button>
+			{% csrf_token %}
+	</form>
+{% endblock %}

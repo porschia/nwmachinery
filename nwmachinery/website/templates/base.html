@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<title>North Western Machinery</title>
+		<meta name="viewport" content=
+			"width=device-width, initial-scale=1.0">
+		<link href="/static/bootstrap/css/bootstrap.min.css" 
+			rel="stylesheet" media="screen">
+		<link href="/static/base.css" rel="stylesheet" media="screen">
+	</head>
+	<body>
+		<div class="container-fluid styled_header">
+			<div class="page-header center">
+				<h1 class="header_color"><img src="static/images/waterwheel3.png" style="width: 60px;height: 60px;padding-bottom: 15px">North Western Machinery</h1>
+			</div>	
+		</div>
+		<div class="container-fluid well bar_style">
+			<div class="row">
+  				<div class="col-md-4 col-xs-2 text-right"><a href="/" style="color: gray">Home</a></div>
+  				<div class="col-md-1 col-xs-2"><a href="/About" style="color: gray">About</a></div>
+  				<div class="col-md-1 col-xs-2"><a href="/Inspections" style="color: gray">Inspections</a></div>
+  				<div class="col-md-2 col-xs-4"><a href="/Software" style="color: gray">Inspection Software</a></div>
+  				<div class="col-md-4 col-xs-2 text-left"><a href="/Contact" style="color: gray">Contact</a></div>
+      		</div>
+      	</div>
+      	<div>      		
+			<div class="container">
+				<div class="center">
+					{% block header %}
+					{% endblock %}
+				</div>
+				<div class="container p_center">
+					{% block paragraph %}
+					{% endblock %}
+				</div>
+				<div class="center">
+					{% block form %}
+					{% endblock %}
+				</div>
+			</div>
+		</div>
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	    <script src="https://ajax.googleapis.com/ajax/libs/	jquery/1.11.2/jquery.min.js"></script>
+	    <!-- Include all compiled plugins (below), or include individual files as needed -->
+	    <script src="js/bootstrap.min.js"></script>
+	</body>
+</html>

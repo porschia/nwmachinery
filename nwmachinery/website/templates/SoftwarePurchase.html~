@@ -1,0 +1,4 @@
+{% extends 'base.html' %}
+
+{% header %}
+	<p>Please contact us to purchase Inspect_It!</p>
